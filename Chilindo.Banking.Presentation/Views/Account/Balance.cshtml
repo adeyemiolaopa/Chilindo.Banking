@@ -1,0 +1,49 @@
+﻿@model Chilindo.Banking.WebApi.Models.BankAccountDto
+
+@{
+    ViewBag.Title = "Check Your BankAccount Balance";
+}
+
+<h2>Balance</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Check Your BankAccount Balance</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AccountNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @if (Model != null) { 
+            <div class="form-group">
+                <label class="control-label col-md-2">BankAccount Balance</label>
+                <div class="col-md-10">
+                    <label class="control-label">@Model.Balance @Model.Currency</label>
+                </div>
+            </div>
+         }
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input name="checkBalance" type="submit" value="Check Balance" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

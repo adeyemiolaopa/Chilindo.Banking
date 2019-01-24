@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chilindo.Banking.Persistence", "Chilindo.Banking.Persistence\Chilindo.Banking.Persistence.csproj", "{16E9D76C-65BA-4C7B-952D-5FB79BF6EA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chilindo.Banking.Domain", "Chilindo.Banking.Domain\Chilindo.Banking.Domain.csproj", "{0C0CA309-A273-4762-A548-C5CCCD4C7811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chilindo.Banking.Presentation", "Chilindo.Banking.Presentation\Chilindo.Banking.Presentation.csproj", "{307B64D1-CEA9-4041-811B-8C06C9364D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chilindo.Banking.WebApi", "Chilindo.Banking.WebApi\Chilindo.Banking.WebApi.csproj", "{6443F326-2D8A-4A06-AAE3-0ECC7B159767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chilindo.Banking.Domain.Tests", "Chilindo.Banking.Domain.Tests\Chilindo.Banking.Domain.Tests.csproj", "{96746926-170E-4C89-AFD6-CB8997A84192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16E9D76C-65BA-4C7B-952D-5FB79BF6EA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E9D76C-65BA-4C7B-952D-5FB79BF6EA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E9D76C-65BA-4C7B-952D-5FB79BF6EA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E9D76C-65BA-4C7B-952D-5FB79BF6EA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0CA309-A273-4762-A548-C5CCCD4C7811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0CA309-A273-4762-A548-C5CCCD4C7811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0CA309-A273-4762-A548-C5CCCD4C7811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0CA309-A273-4762-A548-C5CCCD4C7811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307B64D1-CEA9-4041-811B-8C06C9364D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307B64D1-CEA9-4041-811B-8C06C9364D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307B64D1-CEA9-4041-811B-8C06C9364D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307B64D1-CEA9-4041-811B-8C06C9364D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6443F326-2D8A-4A06-AAE3-0ECC7B159767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6443F326-2D8A-4A06-AAE3-0ECC7B159767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6443F326-2D8A-4A06-AAE3-0ECC7B159767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6443F326-2D8A-4A06-AAE3-0ECC7B159767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96746926-170E-4C89-AFD6-CB8997A84192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96746926-170E-4C89-AFD6-CB8997A84192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96746926-170E-4C89-AFD6-CB8997A84192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96746926-170E-4C89-AFD6-CB8997A84192}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {584E0AE2-E774-4AA0-AF7B-A77DA6FBB2B2}
+	EndGlobalSection
+EndGlobal

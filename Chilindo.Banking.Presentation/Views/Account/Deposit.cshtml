@@ -1,0 +1,97 @@
+﻿@model Chilindo.Banking.WebApi.Models.BankAccountDto
+
+@{
+    ViewBag.Title = "Make Deposit into Your BankAccount";
+}
+
+<h2>Deposit</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Enter your deposit details</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AccountNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AccountNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AccountNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Currency, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.Currency, Chilindo.Banking.Presentation.AppHelper.AppHelper.GetCurrencies(), 
+               "-- Select Currency --", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Currency, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create Deposit" class="btn btn-default" />
+            </div>
+        </div>
+        <br />
+
+        @if (Model != null) { 
+            <div class="col-md-12">
+                <h4>Your transaction details</h4>
+                <hr />
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">BankAccount Number</label>
+                    <div class="col-md-10">
+                        <span class="control-label">@Model.AccountNumber</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Successful</label>
+                    <div class="col-md-10">
+                        <span class="control-label">@Model.Successful</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">BankAccount Balance</label>
+                    <div class="col-md-10">
+                        <span class="control-label">@Model.Balance</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Currency</label>
+                    <div class="col-md-10">
+                        <span class="control-label">@Model.Currency</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Message</label>
+                    <div class="col-md-10">
+                        <span class="control-label">@Model.Message</span>
+                    </div>
+                </div>
+            </div>
+            
+         }
+        
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
